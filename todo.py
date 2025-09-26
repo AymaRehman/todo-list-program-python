@@ -1,8 +1,6 @@
 # todo.py
-# Simple To-Do List App
 
 TASKS_FILE = "tasks.txt"
-tasks = []
 
 # Load tasks from file at start
 def load_tasks():
@@ -29,6 +27,7 @@ def view_tasks(tasks):
     if not tasks:
         print("No tasks yet!")
     else:
+        print("\nYour Tasks:")
         for i, task in enumerate(tasks, start=1):
             print(f"{i}. {task}")
 
@@ -39,6 +38,9 @@ def add_task(tasks):
     print(f"Task '{task}' added!")
 
 def remove_task(tasks):
+    if not tasks:
+        print("No tasks to remove!")
+        return
     view_tasks(tasks)
     try:
         task_no = int(input("Enter task number to remove: "))
