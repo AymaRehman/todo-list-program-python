@@ -25,21 +25,21 @@ def show_menu():
     print("3. Remove task")
     print("4. Exit")
 
-def view_tasks():
+def view_tasks(tasks):
     if not tasks:
         print("No tasks yet!")
     else:
         for i, task in enumerate(tasks, start=1):
             print(f"{i}. {task}")
 
-def add_task():
+def add_task(tasks):
     task = input("Enter new task: ")
     tasks.append(task)
     save_tasks(tasks)
     print(f"Task '{task}' added!")
 
-def remove_task():
-    view_tasks()
+def remove_task(tasks):
+    view_tasks(tasks)
     try:
         task_no = int(input("Enter task number to remove: "))
         removed = tasks.pop(task_no - 1)
