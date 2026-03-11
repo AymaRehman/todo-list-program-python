@@ -1,8 +1,5 @@
-# todo-list-program-python
-First git project: a simple command-line to-do list program in Python
-# To-Do List App (Python)
-
-A simple command-line To-Do List app written in Python.
+# To-Do List App
+My first Git project: a simple command-line to-do list program written in Python
 
 ## Features
 - Add new tasks
@@ -11,5 +8,6 @@ A simple command-line To-Do List app written in Python.
 - Exit the app
 
 ## How to Run
-  bash
+```bash
 python3 todo.py
+```
